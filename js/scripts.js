@@ -177,4 +177,21 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
+	//slider popup
+	const swiperSliderPopup = new Swiper('.slider-popup .swiper', {
+		loop: false,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		autoHeight: true,
+		speed: 400,
+		pagination: false,
+		autoplay: false,
+		navigation: {
+			nextEl: '.btn-action-ico.ico-arrow.ico-arrow-next.button-slider-popup-next',
+			prevEl: '.btn-action-ico.ico-arrow.ico-arrow-prev.button-slider-popup-prev',
+		},
+	
+	});
+
+
 })

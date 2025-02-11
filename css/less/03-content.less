@@ -1,6 +1,21 @@
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.info-section-box {
+	margin-bottom: var(--mbMain);
+	.attention-inner-wrap {
+		margin-top: 30px;
+	}
+	.action-inner-wrap {
+		margin-top: 30px;
+	}
+	.text-inner-wrap {
+		margin-top: 30px;
+	}
+	.lead-inner-wrap {
+		margin-top: 30px;
+	}
+}
 .info-programm-box {
 	margin-bottom: var(--mbMain);
 	.info-inner-wrap {
@@ -145,13 +160,20 @@
 .section-bg {
 	position: relative;
 	z-index: 2;
+	&.bg-left {
+		&:before {
+			background: url(../img/main/bg02.png) left 50px no-repeat;
+			background-size: 292px auto;
+		}
+	}
 	&:before {
 		content: "";
 		display: block;
 		position: absolute;
 		top: 0;
-		bottom: 0;
 		left: 50%;
+		height: 685px;
+		pointer-events: none;
 		width: 100dvw;
 		min-width: var(--min);
 		transform: translateX(-50%);
@@ -203,5 +225,95 @@
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+	}
+}
+
+body.popup-open {
+	overflow: hidden;
+}
+.popup-outer-box {
+	display: none;
+	padding: 50px 0px;
+	animation: fadein ease 0.2s;
+	align-items: center;
+	justify-content: center;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	z-index: 100;
+	background: fade(#000, 30);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	&.active {
+		display: flex;
+	}
+}
+.popup-box {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	position: relative;
+	overflow: hidden;
+	width: 360px;
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 15px;
+	border: 1px solid var(--clr-light);
+	background: #59693C;
+	z-index: 20;
+	color: #fff;
+	padding: 30px var(--paddingContainer);
+	.popup-title-wrap, .popup-footer-wrap {
+		width: 100%;
+		flex-shrink: 0;
+	}
+	.popup-content-wrap {
+		width: 100%;
+		display: block;
+		position: relative;
+	}
+	.popup-title-wrap {
+		padding: 0 20px;
+		margin-bottom: 20px;
+	}
+	.popup-title {
+		display: block;
+		font-size: 19px;
+		line-height: normal;
+		text-transform: uppercase;
+		font-weight: 400;
+		margin: 0;
+		text-align: center;
+		.fpd;
+	}
+	.btn-popup-close {
+		position: absolute;
+		top: 0;right: 0;
+		z-index: 10;
+	}
+}
+.popup-slider-box {
+	padding: 10px 0 0 0;
+	.slider-wrap {
+		margin: 0;
+	}
+	.sl-wrap {
+		padding: 0;
+	}
+	.photos-inner-wrap {
+		display: flex;
+		position: relative;
+		overflow: hidden;
+	}
+	.elm-photo {
+		width: 50%;
+		flex-shrink: 0;
+		aspect-ratio: 164/278;
+		&:only-child {
+			width: 100%;
+			aspect-ratio: 328/278;
+		}
 	}
 }

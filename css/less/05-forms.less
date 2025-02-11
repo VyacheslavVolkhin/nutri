@@ -1,6 +1,12 @@
 /* ----------------------------------- *\
 			forms elements styles
 \* ----------------------------------- */
+.field-title {
+	font-size: 14px;
+	line-height: inherit;
+	font-weight: 300;
+	margin-bottom: 2px;
+}
 .frm-row,
 .frm-field,
 .frm-row-submit {
@@ -12,6 +18,17 @@
 .frm-field {
     display: block;
     width: 100%;
+	margin-bottom: 10px;
+}
+.frm-row-submit {
+	text-align: center;
+	padding-top: 27px;
+	.frm-field {
+		margin: 0;
+	}
+	.btn {
+		min-width: 254px;
+	}
 }
 .frm-select {
 	position: relative;

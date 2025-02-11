@@ -63,6 +63,23 @@
             height: auto;
         }
     }
+	.photo-title {
+		display: inline-block;
+		position: absolute;
+		bottom: 5px;right: 5px;
+		z-index: 3;
+		height: 33px;
+		padding: 0 5px;
+		border-radius: 5px;
+		background: var(--clr-att);
+		max-width: 100%;
+		overflow: hidden;
+		font-size: 17px;
+		text-transform: uppercase;
+		color: #fff;
+		font-weight: 300;
+		line-height: 33px;
+	}
 }
 @supports (aspect-ratio: 1) {
     .elm-photo, .tile-photo {
@@ -110,6 +127,12 @@
 .elm-info {
 	display: inline-flex;
 	align-items: center;
+	&.info-large {
+		font-size: 18px;
+		font-style: italic;
+		color: rgba(89, 105, 60, 0.55);
+		.fg;
+	}
 	.elm-ico {
 		flex-shrink: 0;
 		width: 24px;height: 24px;
@@ -161,11 +184,18 @@
 	margin-left: 0;
 	border-radius: 200px 0 0 200px;
 	background: linear-gradient(93deg, #59693C 5%, rgba(89, 105, 60, 0.70) 100%);;
+	&.type-line {
+		display: inline-block;
+		padding-left: 20px;
+	}
 	&.att-left {
 		text-align: left;
 		border-radius: 0 200px 200px 0;;
 		padding: 10px 35px 10px  var(--paddingContainer);
 		margin-left: calc(var(--paddingContainer) * -1);
 		margin-right: 0;
+	}
+	p {
+		margin: 0;
 	}
 }

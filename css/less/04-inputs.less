@@ -1,11 +1,22 @@
 /* ----------------------------------- *\
 			inputs elements styles
 \* ----------------------------------- */
+[placeholder]::-webkit-input-placeholder {color: #ffffff30;}
+[placeholder]:-moz-placeholder {color: #ffffff30;}
+[placeholder]::-moz-placeholder {color: #ffffff30;}
+[placeholder]:-ms-input-placeholder {color: #ffffff30;}
 .form-input[placeholder] {
     text-overflow: ellipsis;
 }
 .form-input {
     text-overflow: ellipsis;
+	height: 29px;
+	border-radius: 5px;
+	border: 1px solid  var(--clr-light);
+	padding: 0 10px 0 4px;
+	font-size: 10px;
+	color: var(--clr-light);
+	background: none;
 }
 textarea.form-input {
 
@@ -68,6 +79,9 @@ select.form-input:required:invalid {
 	font-weight: 300;
 	text-transform: uppercase;
 	color: var(--clr-light);
+	&.button-full {
+		width: 100%;
+	}
 	&.button-small {
 		height: 29px;
 		font-size: 14px;
@@ -82,6 +96,15 @@ select.form-input:required:invalid {
 			background: url(../img/icons/arrow-link.svg) center no-repeat;
 			background-size: 100% auto;
 			margin-left: 4px;
+		}
+	}
+	&.button-light {
+		background: rgba(184, 192, 167, 0.90);
+		color: var(--clr-base);
+		&.button-arrow {
+			&:after {
+				filter: brightness(0) grayscale(1);;
+			}
 		}
 	}
 	&.button-clear {
@@ -264,6 +287,15 @@ select.form-input:required:invalid {
             .t-rotate(180deg);
         }
     }
+	&.ico-arrow-second {
+		&:hover {
+			background-color: #B7BEA8;
+			border-color: #000;
+			&:before {
+				filter: brightness(0) invert(1) opacity(0.7);
+			}
+		}
+	}
     &.ico-menu {
 		width: 48px;height: 48px;
 		&:before {
